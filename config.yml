@@ -1,0 +1,112 @@
+#DivineMobs config v1.1
+#
+#
+#
+Messages:
+  logo: "&6[&eDivineMobs&6]: "
+  reload: "&cSuccessfully reloaded the config file!"
+  clearall: "&cSuccessfully killed &4&n%Amount%&c entities!"
+  clearall-every: "&cSuccessfully killed &4&n%Amount%&c entities!"
+#
+#
+#You can add unlimited mobs.
+Mobs: 
+  #"example1" can be anything.
+  example1:
+    enabled: true
+    #Get the mob types here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+    mob-type: "ZOMBIE"
+    experience: 10
+    #Get the item names here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+    #At "DIAMOND:1:2:30", "1" represents the minimum amount of the item that can be dropped, "2" represents the maximum amount and "30" the chance of dropping.
+    #All custom_drops can drop at once, none or half et.c.
+    custom-drops:
+      - "DIAMOND:1:2:30"
+      - "GOLD_INGOT:1:1:50"
+    #Only executes when the mob is killed by a player.
+    #use %Player% to get the player name who killed the specicic mob.
+    #Do not include "/" !
+    commands:
+      - "give %Player% minecraft:dirt 1"
+    blacklisted-worlds:
+      - "world_nether"
+      - "world_the_end"
+  example2:
+    enabled: true
+    mob-type: "BLAZE"
+    experience: 20
+    custom-drops:
+      - "DIAMOND:2:3:20"
+      - "EMERALD:1:2:30"
+    commands:
+      - "give %Player% minecraft:diamond 1"
+      - "eco give %Player% 10"
+    blacklisted-worlds:
+      - "world"
+      - "world_the_end"
+      
+Mob-Stacking:
+  enabled: true
+  #Use %Type% to get the mob type & %Amount% to get the mob amount.
+  nametag: "&c%Type% &e&nx%Amount%"
+  #first digit(5) is X, second Y, third Z.
+  stack-radius: "5:5:5"
+  max-amount: 25
+  #Provide the reasons which the mobs should stack.
+  #Get the reasons here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
+  reasons:
+    - "SPAWNER"
+    - "SPAWNER_EGG"
+  #Get the mob types here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+  whitelisted-mobs:
+    - "ZOMBIE"
+    - "BLAZE"
+  #Case sensitive.
+  blacklisted-worlds:
+    - "world_the_end"
+
+#/divinemobs clearall
+Clear-All: 
+  #Clear entities every 600 seconds - 10 minutes. 
+  #Requires plugin reload using plugman or server restart when changing the value of seconds.
+  clear-every: 600
+  #Should be left on true to prevent lag.
+  #If set to true, entities will only be cleared using /dm clearall.
+  enabled: true
+  #Clears only stacked entities if set to true, else it clears both
+  clear-stacked: true
+  #Type which entities should not be removed.
+  #Get the entity types here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+  excluded-entities:
+    - "VILLAGER"
+    - "MINECART"
+    - "MINECART_HOPPER"
+    - "MINECART_CHEST"
+    - "ENDER_PEARL"
+    - "ENDER_CRYSTAL"
+    - "ITEM_FRAME"
+    - "ARMOR_STAND"
+    - "DROPPED_ITEM"
+    - "WOLF"
+    - "HORSE"
+    - "BEE"
+    - "FISHING_HOOK"
+    - "PAINTING"
+    - "PRIMED_TNT"
+    - "SNOWBALL"
+    - "THROWN_EXP_BOTTLE"
+    - "WANDERING_TRADER"
+    - "ZOMBIE_VILLAGER"
+    - "ENDER_DRAGON"
+    - "WITHER"
+  excluded-worlds:
+    - "world_the_end"
+
+  
+  
+      
+      
+      
+      
+      
+      
