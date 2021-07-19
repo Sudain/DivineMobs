@@ -1,4 +1,4 @@
-#DivineMobs config v1.1
+#DivineMobs config v1.2
 #
 #
 #
@@ -17,6 +17,9 @@ Mobs:
     #Get the mob types here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
     mob-type: "ZOMBIE"
     experience: 10
+    #If set to true, exp will go directly to player (will make mending enchantment stop working for this mob type).
+    give-exp-to-player: false
+    enable-looting: true
     #Get the item names here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
     #At "DIAMOND:1:2:30", "1" represents the minimum amount of the item that can be dropped, "2" represents the maximum amount and "30" the chance of dropping.
     #All custom_drops can drop at once, none or half et.c.
@@ -35,6 +38,8 @@ Mobs:
     enabled: true
     mob-type: "BLAZE"
     experience: 20
+    give-exp-to-player: false
+    enable-looting: true
     custom-drops:
       - "DIAMOND:2:3:20"
       - "EMERALD:1:2:30"
@@ -71,10 +76,14 @@ Clear-All:
   #Requires plugin reload using plugman or server restart when changing the value of seconds.
   clear-every: 600
   #Should be left on true to prevent lag.
-  #If set to true, entities will only be cleared using /dm clearall.
+  #If set to false, entities will only be cleared using /dm clearall.
   enabled: true
-  #Clears only stacked entities if set to true, else it clears both
+  #Clears stacked entities if set to true.
   clear-stacked: true
+  #Clears normal entities if set to true.
+  clear-normal-entities: true
+  #Clears named entities if set to true (exluding stacked ones).
+  clear-named: false
   #Type which entities should not be removed.
   #Get the entity types here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
   excluded-entities:
