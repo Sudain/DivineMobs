@@ -1,4 +1,4 @@
-#DivineMobs config v1.2
+#DivineMobs config v1.3
 #
 #
 #
@@ -49,14 +49,30 @@ Mobs:
     blacklisted-worlds:
       - "world"
       - "world_the_end"
-      
+  example3:
+    enabled: true
+    mob-type: "ENDERMAN"
+    experience: 20
+    give-exp-to-player: true
+    enable-looting: true
+    custom-drops:
+      - "OBSIDIAN:1:3:50"
+      - "IRON_INGOT:1:2:30"
+    commands:
+      - "give %Player% enderpearl 1"
+      - "eco give %Player% 10"
+      - "bc &e%Player% just killed an enderman!"
+    blacklisted-worlds:
+      - "world"
+      - "world_the_end"
+  
 Mob-Stacking:
   enabled: true
   #Use %Type% to get the mob type & %Amount% to get the mob amount.
   nametag: "&c%Type% &e&nx%Amount%"
   #first digit(5) is X, second Y, third Z.
-  stack-radius: "5:5:5"
-  max-amount: 25
+  stack-radius: "8:8:8"
+  max-amount: 50
   #Provide the reasons which the mobs should stack.
   #Get the reasons here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
   reasons:
@@ -66,9 +82,15 @@ Mob-Stacking:
   whitelisted-mobs:
     - "ZOMBIE"
     - "BLAZE"
+    - "ENDERMAN"
+    - "CREEPER"
+    - "SPIDER"
+    - "SKELETON"
   #Case sensitive.
   blacklisted-worlds:
     - "world_the_end"
+  #If set to true, stacked mobs will be able to damage other stacked mobs.
+  stacked-mobs-damage: false
 
 #/divinemobs clearall
 Clear-All: 
