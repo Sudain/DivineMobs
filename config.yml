@@ -1,6 +1,4 @@
-#DivineMobs config v1.3
-#
-#
+#DivineMobs config v1.4
 #
 Messages:
   logo: "&6[&eDivineMobs&6]: "
@@ -8,7 +6,12 @@ Messages:
   clearall: "&cSuccessfully killed &4&n%Amount%&c entities!"
   clearall-every: "&cSuccessfully killed &4&n%Amount%&c entities!"
 #
-#
+#Extensions:
+Extensions:
+  #This requires DivineCoins plugin to work
+  #Get DivineCoins here: https://www.spigotmc.org/resources/divinecoins-includes-shop-gui-more.94608/
+  DivineCoins: true
+  
 #You can add unlimited mobs.
 Mobs: 
   #"example1" can be anything.
@@ -31,6 +34,7 @@ Mobs:
     #Do not include "/" !
     commands:
       - "give %Player% minecraft:dirt 1"
+    coins: 1
     blacklisted-worlds:
       - "world_nether"
       - "world_the_end"
@@ -46,6 +50,7 @@ Mobs:
     commands:
       - "give %Player% minecraft:diamond 1"
       - "eco give %Player% 10"
+    coins: 2
     blacklisted-worlds:
       - "world"
       - "world_the_end"
@@ -62,6 +67,7 @@ Mobs:
       - "give %Player% enderpearl 1"
       - "eco give %Player% 10"
       - "bc &e%Player% just killed an enderman!"
+    coins: 3
     blacklisted-worlds:
       - "world"
       - "world_the_end"
