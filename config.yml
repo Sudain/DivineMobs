@@ -11,6 +11,8 @@ Extensions:
   #This requires DivineCoins plugin to work
   #Get DivineCoins here: https://www.spigotmc.org/resources/divinecoins-includes-shop-gui-more.94608/
   DivineCoins: true
+  #If you set PlayerPoints extension to true you need to put "points: {amount}" for every mob you want it to give points like Example 1.
+  PlayerPoints: false
   
 #You can add unlimited mobs.
 Mobs: 
@@ -35,6 +37,7 @@ Mobs:
     commands:
       - "give %Player% minecraft:dirt 1"
     coins: 1
+    points: 2
     blacklisted-worlds:
       - "world_nether"
       - "world_the_end"
