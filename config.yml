@@ -113,7 +113,7 @@ Clear-All:
   clear-stacked: true
   #Clears normal entities if set to true.
   clear-normal-entities: true
-  #Clears named entities if set to true (exluding stacked ones).
+  #Clears named entities if set to true (excluding stacked ones).
   clear-named: false
   #Type which entities should not be removed.
   #Get the entity types here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
