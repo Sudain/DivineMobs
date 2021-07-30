@@ -98,7 +98,7 @@ Mob-Stacking:
   #Case sensitive.
   blacklisted-worlds:
     - "world_the_end"
-  #If set to true, stacked mobs will be able to damage other stacked mobs.
+  #If set to true, stacked mobs will be able to kill other stacked mobs.
   stacked-mobs-damage: false
 
 #/divinemobs clearall
